@@ -8,14 +8,12 @@
     <title>Brickdash</title>
 </head>
 <body>
-    <div class="container-fluid text-center">
-        <h1>Winner you!</h1>
-        <div>
-            <p>Thanks for playing!</p>
-        </div>
-        <div>
-            <p>Honorable Mentions!</p>
-        </div>
+<div class="container-fluid text-center">
+    <input type="text" name="srch" placeholder="Enter access code" id="searchbar">
+    <div class="col-md-12">
+        <button> Join </button>
+        <button> Back </button>
     </div>
+</div>
 </body>
 </html>
