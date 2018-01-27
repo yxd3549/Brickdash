@@ -1,0 +1,6 @@
+CREATE DATABASE Brickdash;
+USE Brickdash;
+
+CREATE TABLE users();
+
+CREATE TABLE groups();
