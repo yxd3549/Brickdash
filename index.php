@@ -6,6 +6,12 @@
     <title>PHP: Hypertext Preprocessor</title>
 </head>
 <body>
-    <h1>Hello World</h1>
+    <h1>
+        Welcome to Brickdash!
+    </h1>
+    <p>
+        Hello World!!!
+    </p>
 </body>
 </html>
+
