@@ -3,7 +3,7 @@ USE Brickdash;
 
 CREATE TABLE users(
 	name VARCHAR(20),
-	userid INT NOT NULL AUTO_INCREMENT
+	userid INT NOT NULL AUTO_INCREMENT PRIMARY KEY
 );
 
 CREATE TABLE groups(
@@ -17,7 +17,7 @@ CREATE TABLE answers(
 );
 
 CREATE TABLE questions(
-	quesid INT NOT NULL AUTO_INCREMENT,
+	quesid INT NOT NULL,
 	question TEXT(65535),
 	correctanswer TEXT(300)
 );
