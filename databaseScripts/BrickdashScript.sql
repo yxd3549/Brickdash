@@ -8,16 +8,16 @@ CREATE TABLE users(
 
 CREATE TABLE groups(
 	userid INT NOT NULL,
-	token VARCHAR(6),
-	q_used TEXT(65535)
+	grouptoken VARCHAR(6)
 );
 
 CREATE TABLE answers(
 	userid INT NOT NULL,
-	token VARCHAR(6),
 	answer TEXT(300)
 );
 
 CREATE TABLE questions(
-	question TEXT(65535)
+	quesid INT NOT NULL AUTO_INCREMENT,
+	question TEXT(65535),
+	correctanswer TEXT(300)
 );
