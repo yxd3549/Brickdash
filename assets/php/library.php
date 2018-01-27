@@ -9,7 +9,7 @@
     }
 
     function joinGroup($attempt, $groups){
-        foreach ()
+        #foreach ()
     }
 
 ?>
