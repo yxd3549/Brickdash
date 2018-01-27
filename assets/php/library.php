@@ -7,6 +7,9 @@
         foreach (array_rand($seed, 6) as $k) $rand .= $seed[$k];
         echo $rand;
     }
-    function
+
+    function joinGroup(){
+
+    }
 
 ?>
