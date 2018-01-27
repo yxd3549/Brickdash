@@ -5,16 +5,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" initial-scale="1.0" />
-    <title>PHP: Hypertext Preprocessor</title>
+    <title>Brickdash</title>
 </head>
 <body>
     <div class="container-fluid text-center" id="welcome">
-        <h1 onclick="window.location = 'www.google.com'">Welcome to Brick Dash</h1>
+        <h1>Welcome to Brick Dash</h1>
         <div >
-            <button type="button" class="btn btn-default" onclick="www.google.com">Join Group</button>
+            <button type="button" class="btn btn-default" onclick="window.location='join.php'">Join Group</button>
         </div>
         <div>
-            <button type="button" class="btn btn-default">Create Group</button>
+            <button type="button" class="btn btn-default" onclick="window.location='create.php'">Create Group</button>
         </div>
     </div>
 </body>
