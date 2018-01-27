@@ -8,8 +8,8 @@
         echo $rand;
     }
 
-    function joinGroup(){
-
+    function joinGroup($attempt, $groups){
+        foreach ()
     }
 
 ?>
