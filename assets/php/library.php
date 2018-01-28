@@ -29,7 +29,6 @@
     }
 
     function readQuestions($mysql) {
-        $questiontype = 0;
         $questiontypearray = array("words", "people", "initials", "movies", "laws");
         for ( $i = 0; $i <= 0; $i++ ) {
             $file = "../text." . $questiontypearray[$i];
