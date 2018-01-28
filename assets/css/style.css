@@ -153,3 +153,21 @@ body{
     margin-top: 50px;
     font-size:55px;
 }
+
+/* create */
+#create_body{
+    background-color: #cacaff;
+    font-family: 'Space Mono', monospace;
+
+}
+
+#username{
+    margin-top:40px;
+    margin-bottom:10px;
+}
+#create{
+    margin-right:24px;
+}
+#back{
+    padding-left: 15px;
+}

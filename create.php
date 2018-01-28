@@ -37,22 +37,24 @@
 <html lang="en">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" initial-scale="1.0" />
     <title>Brickdash</title>
 </head>
-<body>
-<div class="container-fluid text-center">
-    <div class="container-fluid text-center"> <br>
-        <form method="post">
-            <input type="text" name="username" placeholder="Enter name" id="username">
-            <div class="col-md-12">
-                <input type="submit" id='create' name="create" class="btn btn-default" value="Create">
-                <input type="submit" name="back" id='back' class="btn btn-default" value="Back">
-            </div>
-        </form>
+<body id="create_body">
+    <div class="container-fluid text-center">
+        <div class="container-fluid text-center"> <br>
+            <form method="post">
+                <input type="text" name="username" placeholder="Enter name" id="username">
+                <div class="col-md-12">
+                    <input type="submit" id='create' name="create" class="btn btn-default" value="Create">
+                    <input type="submit" name="back" id='back' class="btn btn-default" value="Back">
+                </div>
+            </form>
+        </div>
     </div>
-</div>
 </body>
 </html>
