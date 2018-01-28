@@ -3,11 +3,12 @@ USE Brickdash;
 
 CREATE TABLE users(
 	name VARCHAR(20),
-	userid INT NOT NULL AUTO_INCREMENT PRIMARY KEY
+	userid INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	grouptoken VARCHAR(6)
 );
 
 CREATE TABLE groups(
-	userid INT NOT NULL,
+	groupid INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	grouptoken VARCHAR(6)
 );
 
@@ -17,7 +18,7 @@ CREATE TABLE answers(
 );
 
 CREATE TABLE questions(
-	quesid INT NOT NULL,
+	quesid INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	question TEXT(65535),
 	correctanswer TEXT(300),
 	qtype INT NOT NULL

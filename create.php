@@ -1,25 +1,29 @@
 <?php
-    require_once "assets/php/include.php";
-
-    if(!empty($_POST)){
-
-        $username = htmlentities(mysqli_real_escape_string($mysqli, strip_tags($_POST["username"])));
-        $password = htmlentities(mysqli_real_escape_string($mysqli, strip_tags($_POST["password"])));
-        $hashed_password = sha1($password);
-
-        $query = "SELECT * FROM users WHERE username = '" . $username . "' AND password = '" . $hashed_password ."';";
-
+    require_once "assets/php/library.php";
+    if ( !empty( $_POST )) {
+        $code = generateGroupCode();
+        $username = $_POST["username"];
+        $query = "INSERT INTO users
+                      SET name='" . $username . "', 
+                      grouptoken='" . $code . "'";
+        echo $query;
         $result = mysqli_query($mysqli, $query);
-        if (!$result){
-            die("Database query failed.");
-        }
-
         $num_rows = mysqli_affected_rows($mysqli);
-        if ($num_rows > 0){
-            $message = "You have successfully logged in!";
-        }
-        else{
-            $message = "Your credentials do not match our records";
+
+        $query2 = "INSERT INTO groups
+                      SET grouptoken='" . $code . "'";
+        echo $query2;
+        $result2 = mysqli_query($mysqli, $query2);
+        $num_rows2 = mysqli_affected_rows($mysqli);
+        if ($result && $result2) {
+            $r = new HttpRequest('http://example.com/form.php', HttpRequest::METH_POST);
+            $r->addPostFields(array('code' => $code));
+            try {
+                $r->send();
+            } catch (HttpException $ex) {
+                echo $ex;
+            }
+            header("Location: wait.php");
         }
     }
 ?>
@@ -34,11 +38,11 @@
 </head>
 <body>
 <div class="container-fluid text-center">
-    <div class="container-fluid text-center">
+    <div class="container-fluid text-center"> <br>
         <form method="post">
             <input type="text" name="username" placeholder="Enter name" id="username">
             <div class="col-md-12">
-                <button id='create'> Create </button>
+                <input type="submit" id='create' name="create">
                 <button id='back'> Back </button>
             </div>
         </form>
