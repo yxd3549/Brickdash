@@ -34,7 +34,7 @@
 </head>
 <body>
 <div class="container-fluid text-center">
-    <div class="container-fluid text-center">
+    <div class="container-fluid text-center"> <br>
         <form method="post">
             <input type="text" name="username" placeholder="Enter name" id="username">
             <div class="col-md-12">
