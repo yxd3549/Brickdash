@@ -1,6 +1,13 @@
 <?php
     include_once "assets/php/library.php";
-
+    if ( !empty( $_POST )) {
+        $choice = $_POST["choice"];
+        $query = "UPDATE answers
+                          SET clicked = clicked + 1
+                          WHERE userid='" . $choice . "'";
+        mysqli_query($mysqli, $query);
+        header("Location: results.php");
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,8 +24,10 @@
         <div class="col-md-12 text-center">
             <h1 id='question'> Question? </h1>
             <?php listAnswers($mysqli)?>
-            <input type="text" name="choice" placeholder="Enter answer here" id="choice">
-            <input type="submit" name="choose" id="choose" class="btn btn-default btn-lg" value="Submit">
+            <form method="post">
+                <input type="text" name="choice" placeholder="Enter answer here" id="choice">
+                <input type="submit" name="choose" id="choose" class="btn btn-default btn-lg" value="Submit">
+            </form>
         </div>
 
     </div>

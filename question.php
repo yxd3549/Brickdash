@@ -10,7 +10,9 @@
         $message = $_POST["ans"];
         $query = "INSERT INTO answers
                               SET userid='" . $userid . "', 
-                              answer='" . $message . "'";
+                              answer='" . $message . "',
+                              username='" . $_SESSION["username"] . "',
+                              clicked='" . '0' . "'";
         mysqli_query($mysqli, $query);
         header("Location: answers.php");
     }
@@ -32,7 +34,9 @@
                           WHERE grouptoken='" . $code . "'";
             mysqli_query($mysqli, $query);
             $query = "INSERT INTO answers
-                              SET userid='" . "5" . "', 
+                              SET userid='" . "0" . "',
+                              clicked='" . '0' . "', 
+                              username='Correct Answer',
                               answer='" . $question["correctanswer"] . "'";
             mysqli_query($mysqli, $query);
         } else {
