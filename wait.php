@@ -19,7 +19,7 @@ require_once "assets/php/library.php";
         </div>
     </div>
     <div class="col-md-12">
-        <button> Start Game </button>
+        <button onclick="window.location='home.php'"> Start Game </button>
         <button> Leave Game </button>
     </div>
 </div>
