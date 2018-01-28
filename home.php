@@ -20,7 +20,7 @@ require_once "assets/php/library.php";
             <?php listScores($_SESSION["group"], $mysqli)?>
     <div class="col-md-12 text-center">
         <button type="button" class="btn btn-default" onclick="window.location='question.php'"> Next Round </button>
-        <button type="button" class="btn btn-default"> Finish Game </button>
+        <button type="button" class="btn btn-default" onclick="window.location='finish.php'"> Finish Game </button>
     </div>
 </div>
 </body>
