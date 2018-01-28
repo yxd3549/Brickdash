@@ -43,7 +43,7 @@
             <input type="text" name="username" placeholder="Enter name" id="username">
             <div class="col-md-12">
                 <input type="submit" id='create' name="create">
-                <button id='back'> Back </button>
+                <button id='back' onclick="window.location='index.php'"> Back </button>
             </div>
         </form>
     </div>
