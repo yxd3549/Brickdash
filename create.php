@@ -14,7 +14,7 @@
 
         $query2 = "INSERT INTO groups
                       SET grouptoken='" . $code . "',
-                      size='" . '0' . "'";;
+                      size='" . '1' . "'";;
         echo $query2;
         $result2 = mysqli_query($mysqli, $query2);
         $num_rows2 = mysqli_affected_rows($mysqli);

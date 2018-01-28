@@ -27,7 +27,7 @@
         if ($num_rows > 0){
             echo "<ul>";
             while ( $row = mysqli_fetch_assoc( $result ) ) {
-                echo "<li>" . $row["name"] . " - " .$_SESSION["score"][$row["name"]] . "</li>" ;
+                echo "<li>" . $row["name"] . " - " .$row["score"] . "</li>" ;
             }
             echo "</ul>";
         }
