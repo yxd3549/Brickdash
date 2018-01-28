@@ -18,6 +18,8 @@ CREATE TABLE groups(
 
 CREATE TABLE answers(
 	userid INT NOT NULL,
+	clicked INT NOT NULL,
+
 	answer TEXT(300)
 );
 

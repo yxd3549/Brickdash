@@ -51,7 +51,7 @@
                     <div class="col-md-12">
                         <input type="submit" name="refresh" id="refresh" class="btn btn-default"  value="Refresh Page">
                         <input type="submit" name="start" id="start" class="btn btn-default" value="Start Game">
-                        <input type="submit" name="leave" id="leave" class="btn btn-default" value="Leave">
+                        <input type="submit" name="leave" id="leave" class="btn btn-default" value="Leave Game">
                     </div>
                 </form>
 
