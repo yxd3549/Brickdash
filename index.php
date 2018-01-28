@@ -17,9 +17,9 @@
 
         <h1>Welcome to Brickdash</h1>
         <div>
-            <button type="button" class="btn btn-default" onclick="window.location='join.php'">Join Group</button>
+            <button type="button" class="btn btn-default" onclick="window.location='join.php'">Join Game</button>
 
-            <button type="button" class="btn btn-default" onclick="window.location='create.php'">Create Group</button>
+            <button type="button" class="btn btn-default" onclick="window.location='create.php'">Create Game</button>
         </div>
         <div class="container-fluid " id="rules">
             <button type="button" class="btn btn-default" onclick="window.location='rules.php'">Click here to review rules</button>
