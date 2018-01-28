@@ -22,7 +22,7 @@
             <button type="button" class="btn btn-default" onclick="window.location='create.php'">Create Game</button>
         </div>
         <div class="container-fluid " id="rules">
-            <button type="button" class="btn btn-default" onclick="window.location='rules.php'">Click here to review rules</button>
+            <button type="button" class="btn btn-default" onclick="window.location='rules.php'">Click Here To Review Rules</button>
         </div>
     </div>
 
