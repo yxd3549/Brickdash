@@ -1,3 +1,33 @@
+<?php
+    include_once "assets/php/library.php";
+
+    $code = $_SESSION["group"];
+    $query = "SELECT * FROM groups WHERE grouptoken = '" . $code . "'";
+    $result = mysqli_query($mysqli, $query);
+    $group = mysqli_fetch_assoc( $result );
+    if (!$group["questioned"]){
+        $query = "SELECT * FROM questions
+        ORDER BY RAND()
+        LIMIT 1";
+        $result = mysqli_query($mysqli, $query);
+        $question = mysqli_fetch_assoc( $result );
+        $query = "UPDATE groups
+                          SET currentq = " . $question["quesid"] . ",
+                          questioned = 1 
+                          WHERE grouptoken='" . $code . "'";
+        echo $question["question"];
+        mysqli_query($mysqli, $query);
+    }
+    else{
+        $query = "SELECT * FROM questions
+        WHERE quesid =". $group["currentq"];
+        $result = mysqli_query($mysqli, $query);
+        $question = mysqli_fetch_assoc( $result );
+        echo $question["question"];
+        //echo $question["question"];
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">

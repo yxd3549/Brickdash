@@ -40,7 +40,7 @@ require_once "assets/php/library.php";
                 <?php
                     if (isset($_POST["leaveBtn"]))
                     {
-                        $query = "DELETE FROM users WHERE name='" . "HOW DO I GET NAME!" . "'";
+                        $query = "DELETE FROM users WHERE name='" . $_SESSION["username"] . "'";
 
                         echo $query;
                         echo "button 1 has been pressed";

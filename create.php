@@ -8,13 +8,14 @@
                       userid='" . '0' . "',
                       score='" . '0' . "',
                       grouptoken='" . $code . "'";
-        echo $query;
+        $_SESSION["username"] = $username;
         $result = mysqli_query($mysqli, $query);
         $num_rows = mysqli_affected_rows($mysqli);
 
         $query2 = "INSERT INTO groups
                       SET grouptoken='" . $code . "',
-                      size='" . '1' . "'";;
+                      questioned='" . '0' . "',
+                      size='" . '1' . "'";
         echo $query2;
         $result2 = mysqli_query($mysqli, $query2);
         $num_rows2 = mysqli_affected_rows($mysqli);
