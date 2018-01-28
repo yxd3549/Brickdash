@@ -11,7 +11,7 @@
 </head>
 <body id="rules_body">
 <div class="container-fluid text-center" id="rules">
-    <h1>Welcome to the Rules Page for Brickdash</h1>
+    <h1 id="rules_h">Welcome to the Rules Page for Brickdash</h1>
 
 </div>
 <div class="container-fluid text-right" id="rulesbtn">

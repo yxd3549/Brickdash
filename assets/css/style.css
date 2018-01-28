@@ -1,3 +1,4 @@
+/*index css */
 body{
     background-color: #606060;
 }
@@ -113,15 +114,19 @@ body{
 
 /* rules css */
 #rules_body{
-    background-color:#cacaff;
+    background-color:#444444;
 }
 .rules_design{
     border: 4px solid black;
     border-radius: 8px;
-    border-color: #ffffca;
-    background-color: #ffcaca;
+    border-color: #ff7f00;
+    background-color: #b7b7b7;
     margin-top: 10px;
     margin-bottom: 10px;
+
+}
+#rules_h{
+    color:#e0e0e0;
 }
 #rules_list{
     list-style-type: none;
@@ -129,19 +134,20 @@ body{
 
 /* answer css */
 #answer_body{
-    background-color: #cacaff;
+    background-color: #444444;
     font-family: 'Space Mono', monospace;
 
 }
 #question{
     margin-bottom:30px;
+    color:#e0e0e0;
 }
 
 .answer_choices{
-    background-color:#ffcaca;
+    background-color:#b7b7b7;
     border: 4px solid black;
     border-radius: 8px;
-    border-color: #ffffca;
+    border-color: #ff7f00;
     margin-bottom: 18px;
     font-size:18px;
 }
