@@ -37,7 +37,7 @@
         $result = mysqli_query($mysql, $query);
         $num_rows = mysqli_affected_rows($mysql);
         if ($num_rows > 0){
-            echo "<ul>";
+            echo "<ul class='gen_list'>";
             while ( $row = mysqli_fetch_assoc( $result ) ) {
                 echo "<li>" . $row["name"]. "</li>";
             }

@@ -1,6 +1,5 @@
 <?php
     require_once "assets/php/library.php";
-    print_r($_POST);
     if (isset($_POST["leave"]))
     {
         $query = "DELETE FROM users WHERE name='" . $_SESSION["username"] . "'";
@@ -24,10 +23,10 @@
         <meta name="viewport" content="width=device-width" initial-scale="1.0" />
         <title>Brickdash</title>
     </head>
-    <body>
+    <body id="wait_body">
         <div class="container-fluid text-center">
             <div class="col-md-12" id="meh">
-                <span>Access Code: <?= $_SESSION["group"]?></span>
+                <span id="access_size">Access Code: <?= $_SESSION["group"]?></span>
                 <div class="col-md-12" id="playerlist">
                     <!--<script>
                     /*    function showWaiting() {
