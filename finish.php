@@ -1,3 +1,23 @@
+<?php
+    require_once "assets/php/library.php";
+
+    //first place
+    //$queryname = "SELECT name FROM users WHERE score = MAX(score)";
+    //top 3 players
+    $queryTopThree = "SELECT name, score FROM users ORDER BY score DESC LIMIT '3'";
+
+    $result = mysqli_query($mysqli, $queryTopThree);
+
+    $data = $result->fetch_assoc();
+
+    while($row = $data){
+        foreach ($row as $winnernames => $scores) {
+            echo "$winnernames : $scores\n";
+        }
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
