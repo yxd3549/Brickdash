@@ -11,3 +11,34 @@ body{
 #descrip{
     font-size: 20px;
 }
+
+#players_title{
+    font-size: 60px;
+}
+
+#player_list{
+    font-size:30px;
+}
+
+#card{
+    background-color: darkorange;
+    height:200px;
+    width:200px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+#answer{
+    height:45px;
+    width:400px;
+}
+
+#headq{
+    font-size: 60px;
+}
+
+#playbox{
+    background-color: #ffcaca;
+    height:auto;
+}

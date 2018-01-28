@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 <head>
     <meta charset="UTF-8">
@@ -9,12 +10,12 @@
 </head>
 <body>
 <div class="container-fluid">
-    <div class="col-md-12">
-        <h1> Question? </h1>
+    <div class="col-md-12 text-center">
+        <h1 id="headq"> Question? </h1>
     </div>
-    <div class="col-md-12">
+    <div class="col-md-12 text-center">
         <input type="text" name="ans" placeholder="Enter answer here" id="answer">
-        <button> Submit </button>
+        <button type="button" class="btn btn-default btn-lg"> Submit </button>
     </div>
 </div>
 </body>
