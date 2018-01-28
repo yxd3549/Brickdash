@@ -2,7 +2,7 @@ body{
     background-color: #cacaff;
 }
 #index{
-    font-color: ;
+
 }
 #logo{
     length: 600px;
@@ -112,4 +112,23 @@ body{
 }
 #rules_list{
     list-style-type: none;
+}
+
+/* answer css */
+#answer_body{
+    background-color: #cacaff;
+    font-family: 'Space Mono', monospace;
+
+}
+#question{
+    margin-bottom:30px;
+}
+
+.answer_choices{
+    background-color:#ffcaca;
+    border: 4px solid black;
+    border-radius: 8px;
+    border-color: #ffffca;
+    margin-bottom: 18px;
+    font-size:18px;
 }
