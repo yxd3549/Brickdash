@@ -26,10 +26,12 @@
             $_SESSION["score"] = array($username => 0);
             $_SESSION["size"] = 1;
             header("Location: wait.php");
+            exit();
         }
     }
     else if (!empty( $_POST && isset($_POST["back"]))){
         header("Location: index.php");
+        exit();
     }
 
 ?>
