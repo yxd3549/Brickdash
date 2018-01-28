@@ -24,7 +24,9 @@
         $question = mysqli_fetch_assoc( $result );
     }
 
+if ( !empty( $_POST )) {
 
+}
 
 ?>
 

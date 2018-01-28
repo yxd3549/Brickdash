@@ -1,8 +1,10 @@
 <?php
     require_once "assets/php/library.php";
-    if ( !empty( $_POST )) {
+    $username = $_POST["username"];
+    if ( !empty( $_POST && isset($_POST["create"]))) {
+        print_r($_POST);
         $code = generateGroupCode();
-        $username = $_POST["username"];
+
         $query = "INSERT INTO users
                       SET name='" . $username . "',
                       userid='" . '0' . "',
@@ -26,6 +28,10 @@
             header("Location: wait.php");
         }
     }
+    else if (!empty( $_POST && isset($_POST["back"]))){
+        header("Location: index.php");
+    }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,8 +48,8 @@
         <form method="post">
             <input type="text" name="username" placeholder="Enter name" id="username">
             <div class="col-md-12">
-                <input type="submit" id='create' name="create">
-                <button id='back'> Back </button>
+                <input type="submit" id='create' name="create" class="btn btn-default" value="Create">
+                <input type="submit" name="back" id='back' class="btn btn-default" value="Back">
             </div>
         </form>
     </div>

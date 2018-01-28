@@ -55,7 +55,7 @@
         <input type="text" name="username" placeholder="Enter name" id="username">
         <div class="col-md-12">
             <input type="submit" name="Join" id="join" class="btn btn-default">
-            <button class="btn btn-default"> Back </button>
+            <button type="button" class="btn btn-default" onclick="window.location='index.php'"> Back </button>
         </div>
     </form>
 </div>
