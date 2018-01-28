@@ -53,6 +53,10 @@ body{
 #headq{
     font-size: 60px;
 }
+/*question */
+#question_body{
+    font-family: 'Space Mono', monospace;
+}
 
 #playbox{
     background-color: #ffcaca;
@@ -79,9 +83,14 @@ body{
     font-family: 'Space Mono', monospace;
 
 }
+/* results */
 #results_bod{
     font-family: 'Space Mono', monospace;
+    background-color: #444444;
 
+}
+#question{
+    color: #e0e0e0;
 }
 
 #rules_body{

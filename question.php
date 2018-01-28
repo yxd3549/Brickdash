@@ -59,7 +59,7 @@
     <meta name="viewport" content="width=device-width" initial-scale="1.0" />
     <title>Brickdash</title>
 </head>
-<body>
+<body id="question_body">
 <div class="container-fluid">
     <div class="col-md-12 text-center">
         <h1 id="headq"><?= displayQuestion($question)?></h1>
