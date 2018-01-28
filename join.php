@@ -1,5 +1,7 @@
 <?php
+    echo "beginning";
     require_once "assets/php/library.php";
+    echo "end";
     if ( !empty( $_POST )) {
         $code = $_POST["code"];
         $username = $_POST["username"];
@@ -17,6 +19,7 @@
             $result = mysqli_query($mysqli, $query);
             $num_rows = mysqli_affected_rows($mysqli);
             if ($result && $num_rows > 0) {
+                $_SESSION["score"][$username] = 0;
                 header("Location: wait.php");
             }
         }

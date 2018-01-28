@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 <head>
     <meta charset="UTF-8">
@@ -11,13 +12,13 @@
 <div class="container-fluid">
     <div class="col-md-12">
         <h1 id='question' class="text-center"> Question? </h1>
-        <div class='row'>
-            <div class="col-md-6">
+        <div class='row rounded' >
+            <div class="col-md-6 rounded" id="playbox">
                 <div> Player 1 </div>
                 <div> Answer </div>
                 <div> Points </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-6" id="playbox">
                 <div> Player 2 </div>
                 <div> Answer </div>
                 <div> Points </div>

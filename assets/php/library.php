@@ -1,4 +1,5 @@
 <?php
+    session_start();
     error_reporting( E_ALL & ~E_NOTICE);
     $dbhost = "localhost";
     $dbuster = "root";
@@ -10,7 +11,7 @@
         die();
     }
 
-function generateGroupCode(){
+    function generateGroupCode(){
         $seed = str_split('abcdefghijklmnopqrstuvwxyz'
             .'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
             .'0123456789!');
@@ -19,33 +20,35 @@ function generateGroupCode(){
         return $rand;
     }
 
-    function createGroup($username) {
-        $code = generateGroupCode();
-
-    }
-
-    function joinGroup($attempt, $groups) {
-        #foreach ()
-    }
-
-    function readQuestions($filename) {
-        $questionsFile = fopen($filename, "r") or die("Unable to open file");
-        $questiontype = 0;
-        $questiontypearray = array("word", "people", "initials", "movies", "laws");
-        for ( $i = 0, $i <= 4, $i++ ) {
-            if ( $filename == $questiontypearray[i] ) {
-                $questiontype = i + 1;
+    function listPlayers($group, $mysql){
+        $query = "SELECT * FROM users WHERE grouptoken = '" . $group . "'";
+        $result = mysqli_query($mysql, $query);
+        $num_rows = mysqli_affected_rows($mysql);
+        if ($num_rows > 0){
+            echo "<ul>";
+            while ( $row = mysqli_fetch_assoc( $result ) ) {
+                echo "<li>" . $row["name"]. "</li>";
             }
-            $query = "";
+            echo "</ul>";
+        }
+    }
+
+    function readQuestions($mysql) {
+        $questiontypearray = array("words", "people", "initials", "movies", "laws");
+        for ( $i = 0; $i <= 0; $i++ ) {
+            $file = "../text/" . $questiontypearray[$i];
+            $questionsFile = fopen($file, "r") or die("Unable to open file");
+            $questiontype = $i + 1;
             while(!feof($questionsFile)) {
                 $question = fgets($questionsFile);
-                fgets($questionsFile);
                 $answer = fgets($questionsFile);
-                fgets($questionsFile);
-
                 $query = "INSERT INTO questions SET question='" . $question . "', correctanswer='" . $answer . "', qtype='" . $questiontype . "'";
-                echo $query;
+                $result = mysqli_query($mysql, $query);
+                if ($result){
+                    echo "Done";
+                }
             }
         }
     }
+
 ?>

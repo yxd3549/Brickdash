@@ -16,13 +16,8 @@
         $result2 = mysqli_query($mysqli, $query2);
         $num_rows2 = mysqli_affected_rows($mysqli);
         if ($result && $result2) {
-            $r = new HttpRequest('http://example.com/form.php', HttpRequest::METH_POST);
-            $r->addPostFields(array('code' => $code));
-            try {
-                $r->send();
-            } catch (HttpException $ex) {
-                echo $ex;
-            }
+            $_SESSION["group"] = $code;
+            $_SESSION["score"] = array($username => 0);
             header("Location: wait.php");
         }
     }
