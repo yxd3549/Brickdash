@@ -8,7 +8,7 @@
 
     $result = mysqli_query($mysqli, $queryTopThree);
 
-    $data = $result->fetch_assoc();
+    $data = mysqli_fetch_assoc($result);
 
     while($row = $data){
         foreach ($row as $winnernames => $scores) {
