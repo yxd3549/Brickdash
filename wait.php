@@ -3,6 +3,7 @@ require_once "assets/php/library.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< Updated upstream
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <head>
@@ -36,6 +37,21 @@ require_once "assets/php/library.php";
                 <button onclick="window.location='home.php'"> Start Game </button>
                 <button onclick="window.location='index.php'"> Leave Game </button>
             </div>
+=======
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+    <title>Brickdash</title>
+</head>
+<body>
+<div class="container-fluid text-center">
+    <div class="col-md-12" id="meh">
+        <span>Access Code: <?= $_SESSION["group"]?></span>
+        <div class="col-md-12" id="playerlist">
+            <?php listPlayers($_SESSION["group"], $mysqli) ?>
+>>>>>>> Stashed changes
         </div>
     </body>
 </html>
