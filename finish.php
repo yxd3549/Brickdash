@@ -32,7 +32,7 @@
     <meta name="viewport" content="width=device-width" initial-scale="1.0" />
     <title>Brickdash</title>
 </head>
-<body id="finish_body">
+<body id="finish_body2">
     <div class="container-fluid text-center ">
         <h1 id="winner">Winner you!</h1>
         <div>
