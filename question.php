@@ -1,32 +1,43 @@
 <?php
     include_once "assets/php/library.php";
 
-    $code = $_SESSION["group"];
-    $query = "SELECT * FROM groups WHERE grouptoken = '" . $code . "'";
-    $result = mysqli_query($mysqli, $query);
-    $group = mysqli_fetch_assoc( $result );
-    if (!$group["questioned"]){
-        $query = "SELECT * FROM questions
-        ORDER BY RAND()
-        LIMIT 1";
+    if ( !empty( $_POST )) {
+        $query = "SELECT * FROM users
+            WHERE name ='". $_SESSION["username"]."'";
         $result = mysqli_query($mysqli, $query);
-        $question = mysqli_fetch_assoc( $result );
-        $query = "UPDATE groups
+        $user = mysqli_fetch_assoc( $result );
+        $userid = $user["userid"];
+        $message = $_POST["ans"];
+        $query = "INSERT INTO answers
+                              SET userid='" . $userid . "', 
+                              answer='" . $message . "'";
+        mysqli_query($mysqli, $query);
+        header("Location: answers.php");
+    }
+    else {
+
+        $code = $_SESSION["group"];
+        $query = "SELECT * FROM groups WHERE grouptoken = '" . $code . "'";
+        $result = mysqli_query($mysqli, $query);
+        $group = mysqli_fetch_assoc($result);
+        if (!$group["questioned"]) {
+            $query = "SELECT * FROM questions
+            ORDER BY RAND()
+            LIMIT 1";
+            $result = mysqli_query($mysqli, $query);
+            $question = mysqli_fetch_assoc($result);
+            $query = "UPDATE groups
                           SET currentq = " . $question["quesid"] . ",
                           questioned = 1 
                           WHERE grouptoken='" . $code . "'";
-        mysqli_query($mysqli, $query);
+            mysqli_query($mysqli, $query);
+        } else {
+            $query = "SELECT * FROM questions
+        WHERE quesid =" . $group["currentq"];
+            $result = mysqli_query($mysqli, $query);
+            $question = mysqli_fetch_assoc($result);
+        }
     }
-    else{
-        $query = "SELECT * FROM questions
-        WHERE quesid =". $group["currentq"];
-        $result = mysqli_query($mysqli, $query);
-        $question = mysqli_fetch_assoc( $result );
-    }
-
-if ( !empty( $_POST )) {
-
-}
 
 ?>
 
@@ -43,11 +54,13 @@ if ( !empty( $_POST )) {
 <body>
 <div class="container-fluid">
     <div class="col-md-12 text-center">
-        <h1 id="headq"> <?= displayQuestion($question)?></h1>
+        <h1 id="headq"><?= displayQuestion($question)?></h1>
     </div>
     <div class="col-md-12 text-center">
-        <input type="text" name="ans" placeholder="Enter answer here" id="answer">
-        <input type="button" class="btn btn-default btn-lg"> Submit </input>
+        <form method="post">
+            <input type="text" name="ans" placeholder="Enter answer here" id="answer">
+            <input type="submit" name="go" id="go" class="btn btn-default btn-lg" value="Submit">
+        </form>
     </div>
 </div>
 </body>
