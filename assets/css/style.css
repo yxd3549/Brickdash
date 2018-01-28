@@ -1,7 +1,8 @@
 body{
     background-color: #cacaff;
 }
-#index{
+#index_body{
+    font-family: 'Space Mono', monospace;
 
 }
 #logo{
