@@ -18,6 +18,8 @@ body{
 
 #player_list{
     font-size:30px;
+    list-style-type: none;
+    padding-left: 5px;
 }
 
 #card{
@@ -41,4 +43,29 @@ body{
 #playbox{
     background-color: #ffcaca;
     height:auto;
+    font-size: 30px;
+    border: 2px solid black;
+    border-radius: 8px;
+    border-color: #ffffca;
+}
+
+#subplay{
+    font-size:20px;
+}
+
+#home_play{
+    background-color: #ffcaca;
+    border: 2px solid black;
+    border-radius: 8px;
+    border-color: #ffffca;
+    width:auto;
+}
+
+#homebod{
+    font-family: 'Space Mono', monospace;
+
+}
+#results_bod{
+    font-family: 'Space Mono', monospace;
+
 }
