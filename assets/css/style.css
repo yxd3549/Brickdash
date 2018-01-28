@@ -52,6 +52,8 @@ body{
 
 #headq{
     font-size: 60px;
+    font-family: 'Space Mono', monospace;
+    color: #e0e0e0;
 }
 /*question */
 #question_body{
