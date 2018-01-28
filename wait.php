@@ -9,11 +9,9 @@
     }
     else if (isset($_POST["refresh"])){
         header("Location: wait.php");
-        exit();
     }
     else if (isset($_POST["start"])){
         header("Location: home.php");
-        exit();
     }
 ?>
 
