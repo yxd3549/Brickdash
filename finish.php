@@ -4,13 +4,16 @@
     //first place
     //$queryname = "SELECT name FROM users WHERE score = MAX(score)";
     //top 3 players
-    $queryTopThree = "SELECT name, score FROM users ORDER BY score DESC LIMIT '3'";
-
+    $queryTopThree = "SELECT * FROM users ORDER BY score DESC LIMIT '3'";
     $result = mysqli_query($mysqli, $queryTopThree);
-
     $data = mysqli_fetch_assoc($result);
 
-    while($row = $data){
+    //but there are 3 names and scores at once...problem
+    $grabbedName = $data["names"];
+    $grabbedScore = $data["score"];
+
+    //fix this too
+    while($row = $grabbedName){
         foreach ($row as $winnernames => $scores) {
             echo "$winnernames : $scores\n";
         }
