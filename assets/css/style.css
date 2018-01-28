@@ -225,3 +225,15 @@ body{
     font-size: 20px;
     color: #e0e0e0;
 }
+
+/* reveal */
+#finish_body{
+    margin-top: 10px;
+    background-color:#444444;
+    font-family: 'Space Mono', monospace;
+}
+#reveal{
+    color:#e0e0e0;
+
+
+}
