@@ -4,20 +4,25 @@
     //first place
     //$queryname = "SELECT name FROM users WHERE score = MAX(score)";
     //top 3 players
-    $queryTopThree = "SELECT * FROM users ORDER BY score DESC LIMIT '3'";
+    $queryTopThree = "SELECT * FROM users ORDER BY score DESC LIMIT 3";
     $result = mysqli_query($mysqli, $queryTopThree);
-    $data = mysqli_fetch_assoc($result);
 
-    //but there are 3 names and scores at once...problem
-    $grabbedName = $data["names"];
-    $grabbedScore = $data["score"];
-
-    //fix this too
-    while($row = $grabbedName){
-        foreach ($row as $winnernames => $scores) {
-            echo "$winnernames : $scores\n";
+    $num_rows = mysqli_affected_rows($mysqli);
+    if ($num_rows > 0){
+        $i = 1;
+        while ( $row = mysqli_fetch_assoc( $result ) ) {
+            if ($i == 1){
+                $winner = $row["name"];
+            }
+            else if ($i == 2){
+                $second = $row["name"];
+            }
+            else if ($i == 3){
+                $third = $row["name"];
+            }
+            $i++;
         }
-    }
+}
 
 ?>
 
@@ -34,14 +39,14 @@
 </head>
 <body id="finish2_body">
     <div class="container-fluid text-center ">
-        <h1 id="winner">Winner you!</h1>
+        <h1 id="winner"><?=$winner?> is the Winner!</h1>
         <div>
             <p>Thanks for playing!</p>
         </div>
         <div >
             <ul id="mentions"> Honorable Mentions!
-                <li> Second</li>
-                <li>Third</li>
+                <li>Second place: <?=$second?></li>
+                <li>Third place: <?=$third?></li>
             </ul>
         </div>
         <div class="container-fluid text-center ">
