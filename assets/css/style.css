@@ -79,7 +79,11 @@ body{
     border-color: #ffffca;
     width:auto;
 }
-
+#list_ofplay{
+    list-style-type: none;
+    font-family: 'Space Mono', monospace;
+    color: #e0e0e0;
+}
 
 
 

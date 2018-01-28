@@ -18,7 +18,7 @@ mysqli_query($mysqli, $query);
 <body id="home_body">
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-4 text-center">
             <p id="players_title">Players</p>
             <?php listScores($_SESSION["group"], $mysqli)?>
     <div class="col-md-12 text-center">
