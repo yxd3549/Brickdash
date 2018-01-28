@@ -71,6 +71,7 @@ body{
     font-size:20px;
 }
 
+/* home */
 #home_play{
     background-color: #ffcaca;
     border: 2px solid black;
@@ -79,8 +80,16 @@ body{
     width:auto;
 }
 
-#homebod{
+
+
+
+#home_body{
+    background-color: #444444;
     font-family: 'Space Mono', monospace;
+}
+#players_title{
+    font-size:60px;
+    color: #e0e0e0;
 
 }
 /* results */
@@ -93,12 +102,7 @@ body{
     color: #e0e0e0;
 }
 
-#rules_body{
-    font-family: 'Space Mono', monospace;
-    background-color: #ffcaca;
 
-
-}
 /* join page css */
 #join_bod{
     background-color: #444444;
@@ -124,6 +128,8 @@ body{
 /* rules css */
 #rules_body{
     background-color:#444444;
+    font-family: 'Space Mono', monospace;
+
 }
 .rules_design{
     border: 4px solid black;
