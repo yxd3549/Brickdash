@@ -16,7 +16,6 @@
                               clicked='" . '0' . "'";
         mysqli_query($mysqli, $query);
         header("Location: reveal.php");
-        exit();
     }
     else {
 
@@ -41,7 +40,6 @@
                               username='Correct Answer',
                               answer='" . $question["correctanswer"] . "'";
             mysqli_query($mysqli, $query);
-            exit();
         } else {
             $query = "SELECT * FROM questions
             WHERE quesid =" . $group["currentq"];

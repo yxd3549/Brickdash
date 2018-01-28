@@ -1,8 +1,7 @@
 <?php
     require_once "assets/php/library.php";
-    $username = $_POST["username"];
     if ( !empty( $_POST && isset($_POST["create"]))) {
-        print_r($_POST);
+        $username = $_POST["username"];
         $code = generateGroupCode();
 
         $query = "INSERT INTO users
@@ -26,12 +25,10 @@
             $_SESSION["score"] = array($username => 0);
             $_SESSION["size"] = 1;
             header("Location: wait.php");
-            exit();
         }
     }
     else if (!empty( $_POST && isset($_POST["back"]))){
         header("Location: index.php");
-        exit();
     }
 
 ?>
