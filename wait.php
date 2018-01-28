@@ -35,8 +35,17 @@ require_once "assets/php/library.php";
                 <div class="col-md-12">
                     <button onclick="window.location='wait.php'"> Refresh Page </button>
                     <button onclick="window.location='home.php'"> Start Game </button>
-                    <button onclick="window.location='index.php'"> Leave Game </button>
+                    <button onclick="window.location='index.php'" name="leaveBtn"> Leave Game </button>
                 </div>
+                <?php
+                    if (isset($_POST["leaveBtn"]))
+                    {
+                        $query = "DELETE FROM users WHERE name='" . "HOW DO I GET NAME!" . "'";
+
+                        echo $query;
+                        echo "button 1 has been pressed";
+                    }
+                ?>
             </div>
         </div>
     </body>
