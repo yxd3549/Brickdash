@@ -11,7 +11,6 @@
 <div class="container-fluid text-center">
     <div class="col-md-12" id="meh">
         <span>Access Code: </span>
-        <input type="text" name="srch" placeholder="Enter access code Bar" id="searchbar">
         <div class="col-md-12">
             <ul id='playerlist' class="text-left">
                 <li> Player 1 </li>
