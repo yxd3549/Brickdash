@@ -1,14 +1,5 @@
 <?php
     require_once "assets/php/library.php";
-
-    $query = "DELETE from users";
-    mysqli_query($mysqli, $query);
-
-    $query = "DELETE from groups";
-    mysqli_query($mysqli, $query);
-
-    $query = "DELETE from answers";
-    mysqli_query($mysqli, $query);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,6 +13,7 @@
 
 </head>
 <body id="index_body">
+    <br>
     <div class="container-fluid text-center" id="welcome" id="text-index">
         <div id="logobox">
             <img id="logo" src="assets/Brickdash.png">

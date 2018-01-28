@@ -22,7 +22,19 @@
             }
             $i++;
         }
-}
+    }
+    if (!empty($_POST)){
+        $query = "DELETE from users";
+        mysqli_query($mysqli, $query);
+
+        $query = "DELETE from groups";
+        mysqli_query($mysqli, $query);
+
+        $query = "DELETE from answers";
+        mysqli_query($mysqli, $query);
+
+        header("Location: index.php");
+    }
 
 ?>
 
@@ -50,7 +62,9 @@
             </ul>
         </div>
         <div class="container-fluid text-center ">
-            <button type="button" class="btn btn-default" onclick="window.location='index.php'">Return to the Home Page</button>
+            <form method="post">
+                <input type="submit" name="end" id="end" class="btn btn-default" value="Return to the Home Page">
+            </form>
         </div>
 
     </div>
