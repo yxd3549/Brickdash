@@ -32,11 +32,12 @@ require_once "assets/php/library.php";
                     </script> -->
                     <?php listPlayers($_SESSION["group"], $mysqli) ?>
                 </div>
+                <div class="col-md-12">
+                    <button onclick="window.location='wait.php'"> Refresh Page </button>
+                    <button onclick="window.location='home.php'"> Start Game </button>
+                    <button onclick="window.location='index.php'"> Leave Game </button>
+                </div>
             </div>
-            <div class="col-md-12">
-                <button onclick="window.location='wait.php'"> Refresh Page </button>
-                <button onclick="window.location='home.php'"> Start Game </button>
-                <button onclick="window.location='index.php'"> Leave Game </button>
-
-            </div>
-
+        </div>
+    </body>
+</html>
