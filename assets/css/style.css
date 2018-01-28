@@ -141,11 +141,11 @@ body{
 #mentions{
     font-size: 20px;
     list-style-type: none;
-    margin-right: 39px;
     border: 4px solid black;
     border-radius: 8px;
     border-color: #ffffca;
     background-color: #ffcaca;
+    padding-left:2px;
 
 }
 
