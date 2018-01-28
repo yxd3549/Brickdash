@@ -29,9 +29,9 @@
     <div  class="container-fluid text-center" id="basis">
         <h2>About the Brickdash</h2>
         <p id="descrip">
-            Brickdash is a web based game that was based of the board game Balderdash. In our version of the game
+            Brickdash is a web based game that was based off the board game Balderdash. In our version of the game
             players will attempt to answer questions that are generated. Depending on who starts the game, players will
-            go around taking turns reading out the questions as other players attempt to answer the question correctly.
+            go around taking turns reading out the questions as other players attempt to answer that question correctly.
             To learn more check out the rules page and remember to always have fun! Thanks for choosing Brickdash!
         </p>
     </div>
