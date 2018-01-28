@@ -205,10 +205,11 @@ body{
 }
 
 #wait_body{
-    background-color: #cacaff;
+    background-color: #444444;
     font-family: 'Space Mono', monospace;
     margin-top: 40px;
 }
 #access_size{
     font-size: 20px;
+    color: #e0e0e0;
 }
