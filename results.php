@@ -18,9 +18,11 @@
         }
         if (isset($_POST["next"])){
             header("Location: home.php");
+            exit();
         }
         else if (isset($_POST["finish"])){
             header("Location: finish.php");
+            exit();
         }
     }
 

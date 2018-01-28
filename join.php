@@ -29,6 +29,7 @@
                           WHERE grouptoken='" . $code . "'";
                 mysqli_query($mysqli, $query);
                 header("Location: wait.php");
+                exit();
             }
         }
         else{

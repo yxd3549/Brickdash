@@ -1,4 +1,5 @@
 <?php
+    print_r($_POST);
     include_once "assets/php/library.php";
 
     if ( !empty( $_POST )) {
@@ -15,6 +16,7 @@
                               clicked='" . '0' . "'";
         mysqli_query($mysqli, $query);
         header("Location: answers.php");
+        exit();
     }
     else {
 
@@ -39,6 +41,7 @@
                               username='Correct Answer',
                               answer='" . $question["correctanswer"] . "'";
             mysqli_query($mysqli, $query);
+            exit();
         } else {
             $query = "SELECT * FROM questions
             WHERE quesid =" . $group["currentq"];

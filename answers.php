@@ -20,6 +20,7 @@
             mysqli_query($mysqli, $query);
         }
         header("Location: results.php");
+        exit();
     }
 ?>
 <!DOCTYPE html>
