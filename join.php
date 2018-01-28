@@ -3,7 +3,7 @@
     if ( !empty( $_POST )) {
         $code = $_POST["code"];
         $username = $_POST["username"];
-
+        $_SESSION["username"] = $username;
         // Check if the group exists
         $query = "SELECT * FROM groups WHERE grouptoken = '" . $code . "'";
         $result = mysqli_query($mysqli, $query);
