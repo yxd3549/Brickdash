@@ -212,6 +212,8 @@ body{
 /* wait */
 .gen_list{
     list-style-type: none;
+    font-family: 'Space Mono', monospace;
+    color: #e0e0e0;
 }
 
 #wait_body{
