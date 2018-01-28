@@ -12,7 +12,7 @@
     <h1>Welcome to the Rules Page!</h1>
 </div>
 <div class="container-fluid text-right" id="rulesbtn">
-    <button type="button" class="btn btn-default" onclick="index.php">Back!</button>
+    <button type="button" class="btn btn-default" onclick="window.location='index.php'">Back!</button>
 </div>
 <div class="container-fluid text-center" id="rules">
     <h3>Basics</h3>
@@ -43,7 +43,7 @@
     </ul>
 </div>
 <div class="container-fluid text-right" id="rulesbtn">
-    <button type="button" class="btn btn-default" onclick="index.php">Back!</button>
+    <button type="button" class="btn btn-default" onclick="window.location='index.php'">Back!</button>
 </div>
 </body>
 </html>
