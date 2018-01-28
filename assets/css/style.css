@@ -1,8 +1,9 @@
 body{
-    background-color: #cacaff;
+    background-color: #606060;
 }
 #index_body{
     font-family: 'Space Mono', monospace;
+    background-color: #444444;
 
 }
 #logo{
@@ -10,8 +11,19 @@ body{
     width: 600px;
 }
 #descrip{
+    color: #e0e0e0;
     font-size: 20px;
 }
+
+#welcome{
+    color: #e0e0e0;
+    font-size: 60px;
+}
+#basis{
+    color: #e0e0e0;
+    font-size: 60px;
+}
+
 
 #players_title{
     font-size: 60px;
