@@ -10,22 +10,23 @@ require_once "assets/php/library.php";
         <meta name="viewport" content="width=device-width" initial-scale="1.0" />
         <title>Brickdash</title>
     </head>
-    <body>
+    <body onload = "showWaiting()">
         <div class="container-fluid text-center">
             <div class="col-md-12" id="meh">
                 <span>Access Code: <?= $_SESSION["group"]?></span>
                 <div class="col-md-12" id="playerlist">
                     <script>
                         function showWaiting() {
-                            var xmlhttp = new XMLHttpRequest();
+                            /*var xmlhttp = new XMLHttpRequest();
                             xmlhttp.onreadystatechange = function() {
                                 if(xmlhttp.readystate==4 && xmlhttp.status==200) {
                                     document.getElementById("waitingPlayers").innerHTML = this.responseText;
                                 }
-                            };
+                            };*/
                             //xmlhttp.open("GET", "assets/php/library.php?list=" + $_SESSION["group"], true);
-                            xmlhttp.send();
+                            //xmlhttp.send();
                             setTimeout(showWaiting, 1000)
+                            location.reload()
                         }
                     </script>
                     <?php listPlayers($_SESSION["group"], $mysqli) ?>
