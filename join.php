@@ -8,7 +8,6 @@
     <title>Brickdash</title>
 </head>
 <body>
-<br>
 <div class="container-fluid text-center">
     <form method="post">
         <input type="text" name="code" placeholder="Enter access code" id="code">
