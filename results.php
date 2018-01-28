@@ -33,7 +33,8 @@
             New row
         </div>
         <div class = "text-center">
-            <button type="button" class="btn btn-default large"> Next </button>
+            <button type="button" class="btn btn-default large"> Next Round </button>
+            <button type="button" class="btn btn-default large"> Finish Game </button>
         </div>
     </div>
 </div>

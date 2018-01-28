@@ -54,8 +54,8 @@
         <input type="text" name="code" placeholder="Enter access code" id="code"><br>
         <input type="text" name="username" placeholder="Enter name" id="username">
         <div class="col-md-12">
-            <input type="submit" name="Join" id="join" class="btn btn-default">
-            <button type="button" class="btn btn-default" onclick="window.location='index.php'"> Back </button>
+            <input type="submit" name="Join" id="join" class="btn btn-default" value="Join Game">
+            <button type="button" class="btn btn-default" onclick="window.location='index.php'"> Back Home </button>
         </div>
     </form>
 </div>
