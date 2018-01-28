@@ -3,7 +3,7 @@
     if ( !empty( $_POST )) {
         $code = $_POST["code"];
         $username = $_POST["username"];
-
+        $_SESSION["username"] = $username;
         // Check if the group exists
         $query = "SELECT * FROM groups WHERE grouptoken = '" . $code . "'";
         $result = mysqli_query($mysqli, $query);
@@ -55,7 +55,7 @@
         <input type="text" name="username" placeholder="Enter name" id="username">
         <div class="col-md-12">
             <input type="submit" name="Join" id="join" class="btn btn-default">
-            <button class="btn btn-default"> Back </button>
+            <button type="button" class="btn btn-default" onclick="window.location='index.php'"> Back </button>
         </div>
     </form>
 </div>

@@ -37,7 +37,7 @@
         $result = mysqli_query($mysql, $query);
         $num_rows = mysqli_affected_rows($mysql);
         if ($num_rows > 0){
-            echo "<ul>";
+            echo "<ul class='gen_list'>";
             while ( $row = mysqli_fetch_assoc( $result ) ) {
                 echo "<li>" . $row["name"]. "</li>";
             }
@@ -60,6 +60,29 @@
                     echo "Done";
                 }
             }
+        }
+    }
+
+    function displayQuestion($question){
+        $type = $question["qtype"];
+        $prompt = $question["question"];
+        if ($type == 1){
+            return "What's the definition of " . $prompt . "?";
+        }
+        else if ($type == 2){
+            return "Who is " . $prompt . "?";
+        }
+        else if ($type == 3){
+            return "What does " . $prompt . " stand for?";
+        }
+        else if ($type == 4){
+            return "What is the movie " . $prompt . " about?";
+        }
+        else if ($type == 5){
+            return $prompt;
+        }
+        else{
+            return "WTF";
         }
     }
 

@@ -1,8 +1,9 @@
 body{
     background-color: #cacaff;
 }
-#index{
-    font-color: ;
+#index_body{
+    font-family: 'Space Mono', monospace;
+
 }
 #logo{
     length: 600px;
@@ -96,4 +97,91 @@ body{
 
 #join{
     margin-right:47px;
+}
+
+/* rules css */
+#rules_body{
+    background-color:#cacaff;
+}
+.rules_design{
+    border: 4px solid black;
+    border-radius: 8px;
+    border-color: #ffffca;
+    background-color: #ffcaca;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#rules_list{
+    list-style-type: none;
+}
+
+/* answer css */
+#answer_body{
+    background-color: #cacaff;
+    font-family: 'Space Mono', monospace;
+
+}
+#question{
+    margin-bottom:30px;
+}
+
+.answer_choices{
+    background-color:#ffcaca;
+    border: 4px solid black;
+    border-radius: 8px;
+    border-color: #ffffca;
+    margin-bottom: 18px;
+    font-size:18px;
+}
+/* finish */
+
+#finish_body{
+    font-family: 'Space Mono', monospace;
+}
+#mentions{
+    font-size: 20px;
+    list-style-type: none;
+    border: 4px solid black;
+    border-radius: 8px;
+    border-color: #ffffca;
+    background-color: #ffcaca;
+    padding-left:2px;
+
+}
+
+#winner{
+    margin-top: 50px;
+    font-size:55px;
+}
+
+/* create */
+#create_body{
+    background-color: #cacaff;
+    font-family: 'Space Mono', monospace;
+
+}
+
+#username{
+    margin-top:40px;
+    margin-bottom:10px;
+}
+#create{
+    margin-right:24px;
+}
+#back{
+    padding-left: 15px;
+}
+
+/* wait */
+.gen_list{
+    list-style-type: none;
+}
+
+#wait_body{
+    background-color: #cacaff;
+    font-family: 'Space Mono', monospace;
+    margin-top: 40px;
+}
+#access_size{
+    font-size: 20px;
 }

@@ -9,7 +9,7 @@
     <title>Brickdash</title>
 
 </head>
-<body>
+<body id="index_body">
     <div class="container-fluid text-center" id="welcome" id="text-index">
         <div id="logobox">
             <img id="logo" src="assets/Brickdash.png">

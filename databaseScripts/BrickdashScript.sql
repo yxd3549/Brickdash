@@ -11,7 +11,9 @@ CREATE TABLE users(
 CREATE TABLE groups(
 	groupid INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	grouptoken VARCHAR(6),
-	size INT NOT NULL
+	size INT NOT NULL,
+	questioned BOOL,
+	currentq INT
 );
 
 CREATE TABLE answers(
