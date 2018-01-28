@@ -18,7 +18,7 @@
         </div>
     </div>
     <div class="container-fluid text-right" id="rules">
-        <button type="button" class="btn btn-default" onclick="window.location='create.php'">Create Group</button>
+        <button type="button" class="btn btn-default" onclick="window.location='rules.php'">Rules!</button>
     </div>
     <div  class="container-fluid text-center" id="basis">
         <h2>About the Brickdash</h2>
