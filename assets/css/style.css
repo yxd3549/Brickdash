@@ -69,3 +69,19 @@ body{
     font-family: 'Space Mono', monospace;
 
 }
+
+#rules_body{
+    font-family: 'Space Mono', monospace;
+    background-color: #ffcaca;
+
+
+}
+/* join page css */
+#join_bod{
+    background-color: #cacaff;
+    font-family: 'Space Mono', monospace;
+}
+
+#form_access{
+    padding-top:60px;
+}
