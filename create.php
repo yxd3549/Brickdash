@@ -50,8 +50,8 @@
             <form method="post">
                 <input type="text" name="username" placeholder="Enter name" id="username">
                 <div class="col-md-12">
-                    <input type="submit" id='create' name="create" class="btn btn-default" value="Create">
-                    <input type="submit" name="back" id='back' class="btn btn-default" value="Back">
+                    <input type="submit" id='create' name="create" class="btn btn-default" value="Create Game">
+                    <input type="submit" name="back" id='back' class="btn btn-default" value="Back Home">
                 </div>
             </form>
         </div>

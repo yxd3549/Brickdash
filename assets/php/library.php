@@ -1,3 +1,9 @@
+<script>
+    function chooseAnswer( choice ){
+        document.getElementById("choice").value = choice;
+    }
+</script>
+
 <?php
     session_start();
     error_reporting( E_ALL & ~E_NOTICE);
@@ -86,4 +92,20 @@
         }
     }
 
+    function listAnswers($mysql){
+        $query = "SELECT * FROM answers";
+        $result = mysqli_query($mysql, $query);
+        $num_rows = mysqli_affected_rows($mysql);
+
+        if ($num_rows > 0){
+            $i = 0;
+            while ( $row = mysqli_fetch_assoc( $result ) ) {
+                echo "<div class=\"answer_choices\" onmouseover=\"style='cursor: pointer; background-color: red '\"
+                onmouseleave=\"style= 'cursor: auto; background-color: ffcaca'\"
+                onclick=\"chooseAnswer($i)\"><p>" . $row['answer'] . "</p></div>";
+                $i++;
+            }
+        }
+    }
 ?>
+

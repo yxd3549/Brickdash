@@ -1,3 +1,7 @@
+<?php
+    include_once "assets/php/library.php";
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -12,17 +16,9 @@
     <div class="container-fluid">
         <div class="col-md-12 text-center">
             <h1 id='question'> Question? </h1>
-            <div class="answer_choices">
-                <p> Submitted answer </p>
-            </div>
-            <div class="answer_choices">
-                <p> Submitted answer </p>
-            </div>
-            <div class="answer_choices">
-                <p> Submitted answer </p>
-            </div>
-
-            <button class="btn btn-default">Submit</button>
+            <?php listAnswers($mysqli)?>
+            <input type="text" name="choice" placeholder="Enter answer here" id="choice">
+            <input type="submit" name="choose" id="choose" class="btn btn-default btn-lg" value="Submit">
         </div>
 
     </div>

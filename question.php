@@ -31,9 +31,13 @@
                           questioned = 1 
                           WHERE grouptoken='" . $code . "'";
             mysqli_query($mysqli, $query);
+            $query = "INSERT INTO answers
+                              SET userid='" . "5" . "', 
+                              answer='" . $question["correctanswer"] . "'";
+            mysqli_query($mysqli, $query);
         } else {
             $query = "SELECT * FROM questions
-        WHERE quesid =" . $group["currentq"];
+            WHERE quesid =" . $group["currentq"];
             $result = mysqli_query($mysqli, $query);
             $question = mysqli_fetch_assoc($result);
         }
