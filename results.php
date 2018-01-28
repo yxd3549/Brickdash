@@ -1,3 +1,6 @@
+<?php
+    include_once "assets/php/library.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -13,24 +16,8 @@
     <div class="col-md-12">
         <h1 id='question' class="text-center"> Question? </h1>
         <div class='row rounded' >
-            <div class="col-md-6 rounded" id="playbox">
-                <div> Player 1 </div>
-                    <div id="subplay">
-                        <div> Answer </div>
-                        <div> Points </div>
-                    </div>
-            </div>
-            <div class="col-md-6" id="playbox">
-                <div> Player 2 </div>
-                    <div id="subplay">
-                        <div> Answer </div>
-                        <div> Points </div>
-                    </div>
-            </div>
+        <?php listResults($mysqli) ?>
 
-        </div>
-        <div class="row">
-            New row
         </div>
         <div class = "text-center">
             <button type="button" class="btn btn-default large"> Next Round </button>

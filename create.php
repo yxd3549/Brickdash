@@ -7,7 +7,7 @@
 
         $query = "INSERT INTO users
                       SET name='" . $username . "',
-                      userid='" . '0' . "',
+                      userid='" . '1' . "',
                       score='" . '0' . "',
                       grouptoken='" . $code . "'";
         $_SESSION["username"] = $username;

@@ -53,7 +53,7 @@
 
     function readQuestions($mysql) {
         $questiontypearray = array("words", "people", "initials", "movies", "laws");
-        for ( $i = 0; $i <= 0; $i++ ) {
+        for ( $i = 0; $i <= 4; $i++ ) {
             $file = "../text/" . $questiontypearray[$i];
             $questionsFile = fopen($file, "r") or die("Unable to open file");
             $questiontype = $i + 1;
@@ -96,7 +96,6 @@
         $query = "SELECT * FROM answers";
         $result = mysqli_query($mysql, $query);
         $num_rows = mysqli_affected_rows($mysql);
-
         if ($num_rows > 0){
             $i = 0;
             while ( $row = mysqli_fetch_assoc( $result ) ) {
@@ -107,5 +106,36 @@
             }
         }
     }
+
+    /*
+     *
+     *<div class="col-md-6" id="playbox">
+                <div> Player 2 </div>
+                    <div id="subplay">
+                        <div> Answer </div>
+                        <div> Points </div>
+                    </div>
+            </div>
+     */
+
+    function listResults($mysql){
+        $query = "SELECT * FROM answers";
+        $result = mysqli_query($mysql, $query);
+        $num_rows = mysqli_affected_rows($mysql);
+        if ($num_rows > 0){
+            $i = 0;
+            while ( $row = mysqli_fetch_assoc( $result ) ) {
+                echo "<div class='col-md-6' id='playbox'>
+                <div>" . $row["username"] . "</div>
+                <div id='subplay'>
+                    <div>" . $row["answer"] ." </div>
+                    <div>" . $row["clicked"] . " </div>
+                </div></div>
+                ";
+                $i++;
+            }
+        }
+    }
+
 ?>
 
