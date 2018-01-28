@@ -1,6 +1,5 @@
 <?php
     include_once "assets/php/library.php";
-    print_r($_POST);
     if ( !empty( $_POST )){
         print_r($_POST);
         $query = "SELECT * FROM answers";
