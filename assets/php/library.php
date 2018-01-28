@@ -1,4 +1,5 @@
 <?php
+    include_once "include.php";
     function generateGroupCode(){
         $seed = str_split('abcdefghijklmnopqrstuvwxyz'
             .'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
@@ -8,6 +9,10 @@
         echo $rand;
     }
 
+    function createGroup($username){
+        $code = generateGroupCode();
+
+    }
     function joinGroup($attempt, $groups){
         #foreach ()
     }

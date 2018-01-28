@@ -19,5 +19,6 @@ CREATE TABLE answers(
 CREATE TABLE questions(
 	quesid INT NOT NULL,
 	question TEXT(65535),
-	correctanswer TEXT(300)
+	correctanswer TEXT(300),
+	qtype INT NOT NULL
 );

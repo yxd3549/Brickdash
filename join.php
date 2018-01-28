@@ -9,11 +9,14 @@
 </head>
 <body>
 <div class="container-fluid text-center">
-    <input type="text" name="srch" placeholder="Enter access code" id="searchbar">
-    <div class="col-md-12">
-        <button> Join </button>
-        <button> Back </button>
-    </div>
+    <form method="post">
+        <input type="text" name="code" placeholder="Enter access code" id="code">
+        <input type="text" name="username" placeholder="Enter name" id="username">
+        <div class="col-md-12">
+            <button> Join </button>
+            <button> Back </button>
+        </div>
+    </form>
 </div>
 </body>
 </html>
