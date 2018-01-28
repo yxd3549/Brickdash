@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
 
 
 <head>
@@ -11,12 +12,17 @@
 </head>
 <body>
 <div class="container-fluid">
-    <div class="col-md-12">
-        <p>Players</p>
-        <ul class="text-left">
-            <li> Player 1 <span> score </span> </li>
-            <li> Player 2 <span>score </span> </li>
-        </ul>
+    <div class="row">
+        <div class="col-md-4">
+            <p id="players_title">Players</p>
+            <ul class="text-left" id="player_list">
+                <li> Player 1 <span> score </span> </li>
+                <li> Player 2 <span>score </span> </li>
+            </ul>
+        </div>
+        <div class="col-md-8" id="card">
+            <p>Deck of cards</p>
+        </div>
     </div>
     <div class="col-md-12 text-center">
         <button> Next Round </button>
