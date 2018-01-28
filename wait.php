@@ -33,17 +33,25 @@ require_once "assets/php/library.php";
                     <?php listPlayers($_SESSION["group"], $mysqli) ?>
                 </div>
                 <div class="col-md-12">
-                    <button onclick="window.location='wait.php'"> Refresh Page </button>
-                    <button onclick="window.location='home.php'"> Start Game </button>
-                    <button onclick="window.location='index.php'" name="leaveBtn"> Leave Game </button>
+
+                    <button> onclick="window.location='index.php'" name="leaveBtn"> Leave Game </button>
                 </div>
+
+                <form method="post" id="form_access2">
+                    <div class="col-md-12">
+                        <button onclick="window.location='wait.php'"> Refresh Page </button>
+                        <button onclick="window.location='home.php'"> Start Game </button>
+                        <input type="submit" name="Leave Game" id="leave" class="btn btn-default">
+                    </div>
+                </form>
+
                 <?php
                     if (isset($_POST["leaveBtn"]))
                     {
                         $query = "DELETE FROM users WHERE name='" . $_SESSION["username"] . "'";
-
-                        echo $query;
-                        echo "button 1 has been pressed";
+                        $result = mysqli_query($mysqli, $query);
+                        echo $result;
+                        echo "leaveBtn has been pressed";
                     }
                 ?>
             </div>
