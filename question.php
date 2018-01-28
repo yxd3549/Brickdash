@@ -15,7 +15,7 @@
                               username='" . $_SESSION["username"] . "',
                               clicked='" . '0' . "'";
         mysqli_query($mysqli, $query);
-        header("Location: answers.php");
+        header("Location: reveal.php");
         exit();
     }
     else {
