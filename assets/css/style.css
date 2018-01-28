@@ -37,3 +37,8 @@ body{
 #headq{
     font-size: 60px;
 }
+
+#playbox{
+    background-color: #ffcaca;
+    height:auto;
+}
