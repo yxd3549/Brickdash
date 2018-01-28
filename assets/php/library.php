@@ -99,8 +99,8 @@
         if ($num_rows > 0){
             $i = 0;
             while ( $row = mysqli_fetch_assoc( $result ) ) {
-                echo "<div class=\"answer_choices\" onmouseover=\"style='cursor: pointer; background-color: red '\"
-                onmouseleave=\"style= 'cursor: auto; background-color: ffcaca'\"
+                echo "<div class=\"answer_choices\" onmouseover=\"style='cursor: pointer; background-color: b7b7b7 '\"
+                onmouseleave=\"style= 'cursor: auto; background-color: b7b7b7'\"
                 onclick=\"chooseAnswer($i)\"><p>" . $row['answer'] . "</p></div>";
                 $i++;
             }
