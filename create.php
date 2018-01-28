@@ -17,6 +17,7 @@
         $num_rows2 = mysqli_affected_rows($mysqli);
         if ($result && $result2) {
             $_SESSION["group"] = $code;
+            $_SESSION["score"] = array($username => 0);
             header("Location: wait.php");
         }
     }
