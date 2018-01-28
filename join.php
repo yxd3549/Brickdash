@@ -1,7 +1,5 @@
 <?php
-    echo "beginning";
     require_once "assets/php/library.php";
-    echo "end";
     if ( !empty( $_POST )) {
         $code = $_POST["code"];
         $username = $_POST["username"];
@@ -11,12 +9,13 @@
         $result = mysqli_query($mysqli, $query);
         $num_rows = mysqli_affected_rows($mysqli);
         if ($num_rows > 0){
+            $group = mysqli_fetch_assoc( $result );
             $message = "You have successfully joined a group!";
             $_SESSION["group"] = $code;
             // If so, insert user into the database with the correct group
             $query = "INSERT INTO users
                           SET name='" . $username . "', 
-                          userid='" . $_SESSION["size"] . "',
+                          userid='" . $group["size"] . "',
                           score='" . '0' . "',
                           grouptoken='" . $code . "'";
             $result = mysqli_query($mysqli, $query);
