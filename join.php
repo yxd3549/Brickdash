@@ -10,12 +10,13 @@
         $num_rows = mysqli_affected_rows($mysqli);
         if ($num_rows > 0){
             $group = mysqli_fetch_assoc( $result );
+            $size = $group["size"] + 1;
             $message = "You have successfully joined a group!";
             $_SESSION["group"] = $code;
             // If so, insert user into the database with the correct group
             $query = "INSERT INTO users
                           SET name='" . $username . "', 
-                          userid='" . $group["size"] . "',
+                          userid='" . $size . "',
                           score='" . '0' . "',
                           grouptoken='" . $code . "'";
             $result = mysqli_query($mysqli, $query);

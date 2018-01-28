@@ -6,6 +6,19 @@
                           SET clicked = clicked + 1
                           WHERE userid='" . $choice . "'";
         mysqli_query($mysqli, $query);
+
+        // Grant points for right answer
+        $query = "SELECT * from answers
+        WHERE userid='" . $choice ."'";
+        $result = mysqli_query($mysqli, $query);
+        $answer = mysqli_fetch_assoc( $result );
+        if ($answer["username"] == "Correct Answer"){
+            $username = $_SESSION["username"];
+            $query = "UPDATE users
+                          SET score = score + 2
+                          WHERE name='" . $username . "'";
+            mysqli_query($mysqli, $query);
+        }
         header("Location: results.php");
     }
 ?>

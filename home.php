@@ -1,5 +1,8 @@
 <?php
 require_once "assets/php/library.php";
+
+$query = "DELETE from answers";
+mysqli_query($mysqli, $query);
 ?>
 <!DOCTYPE html>
 <html lang="en">
