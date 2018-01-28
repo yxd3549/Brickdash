@@ -15,7 +15,6 @@
                           SET currentq = " . $question["quesid"] . ",
                           questioned = 1 
                           WHERE grouptoken='" . $code . "'";
-        echo $question["question"];
         mysqli_query($mysqli, $query);
     }
     else{
@@ -23,9 +22,10 @@
         WHERE quesid =". $group["currentq"];
         $result = mysqli_query($mysqli, $query);
         $question = mysqli_fetch_assoc( $result );
-        echo $question["question"];
-        //echo $question["question"];
     }
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -41,11 +41,11 @@
 <body>
 <div class="container-fluid">
     <div class="col-md-12 text-center">
-        <h1 id="headq"> Question? </h1>
+        <h1 id="headq"> <?= displayQuestion($question)?></h1>
     </div>
     <div class="col-md-12 text-center">
         <input type="text" name="ans" placeholder="Enter answer here" id="answer">
-        <button type="button" class="btn btn-default btn-lg"> Submit </button>
+        <input type="button" class="btn btn-default btn-lg"> Submit </input>
     </div>
 </div>
 </body>
