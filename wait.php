@@ -15,8 +15,8 @@ require_once "assets/php/library.php";
             <div class="col-md-12" id="meh">
                 <span>Access Code: <?= $_SESSION["group"]?></span>
                 <div class="col-md-12" id="playerlist">
-                    <script>
-                        function showWaiting() {
+                    <!--<script>
+                    /*    function showWaiting() {
                             //onload //= "showWaiting()"
                             var xmlhttp = new XMLHttpRequest();
                             xmlhttp.onreadystatechange = function() {
@@ -26,10 +26,10 @@ require_once "assets/php/library.php";
                             };
                             //xmlhttp.open("GET", "assets/php/library.php?list=" + $_SESSION["group"], true);
                             //xmlhttp.send();
-                            setTimeout(showWaiting, 10000);
-                            location.reload();
-                        }
-                    </script>
+                            //setTimeout(showWaiting, 10000);
+                            //location.reload();
+                        }*/
+                    </script> -->
                     <?php listPlayers($_SESSION["group"], $mysqli) ?>
                 </div>
             </div>
