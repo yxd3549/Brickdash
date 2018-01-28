@@ -1,6 +1,20 @@
 <?php
-require_once "assets/php/library.php";
+    require_once "assets/php/library.php";
+    print_r($_POST);
+    if (isset($_POST["leave"]))
+    {
+        $query = "DELETE FROM users WHERE name='" . $_SESSION["username"] . "'";
+        mysqli_query($mysqli, $query);
+        header("Location: index.php");
+    }
+    else if (isset($_POST["refresh"])){
+        header("Location: wait.php");
+    }
+    else if (isset($_POST["start"])){
+        header("Location: home.php");
+    }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -32,28 +46,14 @@ require_once "assets/php/library.php";
                     </script> -->
                     <?php listPlayers($_SESSION["group"], $mysqli) ?>
                 </div>
-                <div class="col-md-12">
-
-                    <button> onclick="window.location='index.php'" name="leaveBtn"> Leave Game </button>
-                </div>
-
                 <form method="post" id="form_access2">
                     <div class="col-md-12">
-                        <button onclick="window.location='wait.php'"> Refresh Page </button>
-                        <button onclick="window.location='home.php'"> Start Game </button>
-                        <input type="submit" name="Leave Game" id="leave" class="btn btn-default">
+                        <input type="submit" name="refresh" id="refresh" class="btn btn-default"  value="Refresh Page">
+                        <input type="submit" name="start" id="start" class="btn btn-default" value="Start Game">
+                        <input type="submit" name="leave" id="leave" class="btn btn-default" value="Leave">
                     </div>
                 </form>
 
-                <?php
-                    if (isset($_POST["leaveBtn"]))
-                    {
-                        $query = "DELETE FROM users WHERE name='" . $_SESSION["username"] . "'";
-                        $result = mysqli_query($mysqli, $query);
-                        echo $result;
-                        echo "leaveBtn has been pressed";
-                    }
-                ?>
             </div>
         </div>
     </body>
