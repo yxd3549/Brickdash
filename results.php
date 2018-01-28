@@ -2,14 +2,13 @@
     include_once "assets/php/library.php";
     print_r($_POST);
     if ( !empty( $_POST )){
-
+        print_r($_POST);
         $query = "SELECT * FROM answers";
-        $result = mysqli_query($mysql, $query);
-        $num_rows = mysqli_affected_rows($mysql);
+        $result = mysqli_query($mysqli, $query);
+        $num_rows = mysqli_affected_rows($mysqli);
         if ($num_rows > 0){
             $i = 0;
             while ( $row = mysqli_fetch_assoc( $result ) ) {
-
                 $query = "UPDATE users
                           SET score = score +" . $row["clicked"] . "
                           WHERE name='" . $row["username"] . "'";
@@ -18,11 +17,10 @@
         }
         if (isset($_POST["next"])){
             header("Location: home.php");
-            exit();
         }
         else if (isset($_POST["finish"])){
             header("Location: finish.php");
-            exit();
+
         }
     }
 

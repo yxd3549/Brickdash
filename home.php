@@ -1,8 +1,14 @@
 <?php
-require_once "assets/php/library.php";
+    require_once "assets/php/library.php";
 
-$query = "DELETE from answers";
-mysqli_query($mysqli, $query);
+    $query = "DELETE from answers";
+    mysqli_query($mysqli, $query);
+
+    $query = "UPDATE groups
+      SET questioned = 0 
+      WHERE grouptoken='" . $_SESSION["group"] . "'";
+    $result = mysqli_query($mysqli, $query);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

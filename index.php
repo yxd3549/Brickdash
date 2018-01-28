@@ -1,3 +1,15 @@
+<?php
+    require_once "assets/php/library.php";
+
+    $query = "DELETE from users";
+    mysqli_query($mysqli, $query);
+
+    $query = "DELETE from groups";
+    mysqli_query($mysqli, $query);
+
+    $query = "DELETE from answers";
+    mysqli_query($mysqli, $query);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
