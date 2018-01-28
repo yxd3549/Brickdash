@@ -37,25 +37,22 @@ function generateGroupCode(){
 
     function readQuestions($filename) {
         $questionsFile = fopen($filename, "r") or die("Unable to open file");
-        $questiontype = 5;
-        if ($filename == "initials")
-        {
+        $questiontype = 0;
+        $questiontypearray = array("word", "people", "initials", "movies", "laws");
+        for ( $i = 0, $i <= 4, $i++ ) {
+            if ( $filename == $questiontypearray[i] ) {
+                $questiontype = i + 1;
+            }
+            $query = "";
+            while(!feof($questionsFile)) {
+                $question = fgets($questionsFile);
+                fgets($questionsFile);
+                $answer = fgets($questionsFile);
+                fgets($questionsFile);
 
+                $query = "INSERT INTO questions SET question='" . $question . "', correctanswer='" . $answer . "', qtype='" . $questiontype . "'";
+                echo $query;
+            }
         }
-        $result = "";
-        while(!feof($questionsFile)) {
-            $question = fgets($questionsFile);
-            fgets($questionsFile);
-            $answer = fgets($questionsFile);
-            fgets($questionsFile);
-
-            $query = "question='" . $question . "', correctanswer='" . $answer . "', correctanswer='" . $answer . "'";
-            echo $query;
-
-            $result = mysqli_query($mysqli, $query);
-
-            echo "<li><h5 style='font-weight: bold'>".$question . "</h5>" .  "<p>" . $answer . "</p></li>";
-        }
-        return $result;
     }
 ?>
