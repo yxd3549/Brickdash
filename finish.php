@@ -44,6 +44,10 @@
                 <li>Third</li>
             </ul>
         </div>
+        <div class="container-fluid text-center ">
+            <button type="button" class="btn btn-default" onclick="window.location='index.php'">Return to the Home Page</button>
+        </div>
+
     </div>
 </body>
 </html>

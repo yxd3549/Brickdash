@@ -13,7 +13,7 @@
         <div class="container-fluid text-center ">
             <h1 id="reveal">Awaiting the Grand Reveal!</h1>
         </div>
-        <div class="container-fluid text-center ">
+        <div class="container-fluid text-center "> <br>
             <button type="button" class="btn btn-default" onclick="window.location='answers.php'">Reveal Game</button>
         </div>
     </body>
