@@ -1,4 +1,5 @@
 <?php
+<<<<<<< Updated upstream
     error_reporting( E_ALL & ~E_NOTICE);
     $dbhost = "localhost";
     $dbuster = "root";
@@ -11,6 +12,12 @@
     }
 
 function generateGroupCode(){
+=======
+    echo"beginning";
+    include_once "include.php";
+    echo"ending";
+    function generateGroupCode(){
+>>>>>>> Stashed changes
         $seed = str_split('abcdefghijklmnopqrstuvwxyz'
             .'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
             .'0123456789!');

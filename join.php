@@ -1,5 +1,7 @@
 <?php
+    echo "beginning";
     require_once "assets/php/library.php";
+    echo "end";
     if ( !empty( $_POST )) {
         $code = $_POST["code"];
         $username = $_POST["username"];
