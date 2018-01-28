@@ -25,15 +25,15 @@ require_once "assets/php/library.php";
                             };*/
                             //xmlhttp.open("GET", "assets/php/library.php?list=" + $_SESSION["group"], true);
                             //xmlhttp.send();
-                            setTimeout(showWaiting, 1000)
-                            location.reload()
+                            setTimeout(showWaiting, 10000);
+                            location.reload();
                         }
                     </script>
                     <?php listPlayers($_SESSION["group"], $mysqli) ?>
                 </div>
             </div>
             <div class="col-md-12">
-                <button> Start Game </button>
+                <button onclick="window.location='home.php'"> Start Game </button>
                 <button> Leave Game </button>
             </div>
         </div>

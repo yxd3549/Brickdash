@@ -20,6 +20,18 @@
         return $rand;
     }
 
+    function listScores($group, $mysql){
+        $query = "SELECT * FROM users WHERE grouptoken = '" . $group . "'";
+        $result = mysqli_query($mysql, $query);
+        $num_rows = mysqli_affected_rows($mysql);
+        if ($num_rows > 0){
+            echo "<ul>";
+            while ( $row = mysqli_fetch_assoc( $result ) ) {
+                echo "<li>" . $row["name"] . " - " .$_SESSION["score"][$row["name"]] . "</li>" ;
+            }
+            echo "</ul>";
+        }
+    }
     function listPlayers($group, $mysql){
         $query = "SELECT * FROM users WHERE grouptoken = '" . $group . "'";
         $result = mysqli_query($mysql, $query);

@@ -12,14 +12,22 @@
         $num_rows = mysqli_affected_rows($mysqli);
         if ($num_rows > 0){
             $message = "You have successfully joined a group!";
+            $_SESSION["group"] = $code;
             // If so, insert user into the database with the correct group
             $query = "INSERT INTO users
                           SET name='" . $username . "', 
+                          userid='" . $_SESSION["size"] . "',
+                          score='" . '0' . "',
                           grouptoken='" . $code . "'";
             $result = mysqli_query($mysqli, $query);
             $num_rows = mysqli_affected_rows($mysqli);
             if ($result && $num_rows > 0) {
                 $_SESSION["score"][$username] = 0;
+                //increase the size
+                $query = "UPDATE groups
+                          SET size = size + 1 
+                          WHERE grouptoken='" . $code . "'";
+                mysqli_query($mysqli, $query);
                 header("Location: wait.php");
             }
         }

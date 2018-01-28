@@ -3,13 +3,15 @@ USE Brickdash;
 
 CREATE TABLE users(
 	name VARCHAR(20),
-	userid INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	grouptoken VARCHAR(6)
+	userid INT NOT NULL,
+	grouptoken VARCHAR(6),
+	score INT NOT NULL
 );
 
 CREATE TABLE groups(
 	groupid INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-	grouptoken VARCHAR(6)
+	grouptoken VARCHAR(6),
+	size INT NOT NULL
 );
 
 CREATE TABLE answers(

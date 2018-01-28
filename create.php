@@ -4,20 +4,24 @@
         $code = generateGroupCode();
         $username = $_POST["username"];
         $query = "INSERT INTO users
-                      SET name='" . $username . "', 
+                      SET name='" . $username . "',
+                      userid='" . '0' . "',
+                      score='" . '0' . "',
                       grouptoken='" . $code . "'";
         echo $query;
         $result = mysqli_query($mysqli, $query);
         $num_rows = mysqli_affected_rows($mysqli);
 
         $query2 = "INSERT INTO groups
-                      SET grouptoken='" . $code . "'";
+                      SET grouptoken='" . $code . "',
+                      size='" . '0' . "'";;
         echo $query2;
         $result2 = mysqli_query($mysqli, $query2);
         $num_rows2 = mysqli_affected_rows($mysqli);
         if ($result && $result2) {
             $_SESSION["group"] = $code;
             $_SESSION["score"] = array($username => 0);
+            $_SESSION["size"] = 1;
             header("Location: wait.php");
         }
     }
